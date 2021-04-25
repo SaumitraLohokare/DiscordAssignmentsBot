@@ -47,6 +47,6 @@ async def getAssignments(username, password) -> str:
     for assignment in assignments:
         msg = msg + f'\n{assignment[0][:30]:30s} | {assignment[1]:20s} | {assignment[2]:10s}'
     if msg.strip() == '':
-        return 'Incorrect Username or Password.'
+        return 'Incorrect Username or Password.\nOr No upcoming assignments.'
     msg = '```\n' + msg + '\n```'
     return msg
